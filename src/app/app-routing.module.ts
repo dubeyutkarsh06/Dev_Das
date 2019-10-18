@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
   { path: 'air', loadChildren: './air/air.module#AirPageModule' },
   { path: 'water', loadChildren: './water/water.module#WaterPageModule' },
+  { path: 'feed', loadChildren: './feed/feed.module#FeedPageModule' },
 ];
 
 @NgModule({

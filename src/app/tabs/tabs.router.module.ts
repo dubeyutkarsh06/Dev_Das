@@ -8,7 +8,7 @@ const routes: Routes = [
         component: TabsPage,
         children: [
             { path: 'air', loadChildren: '../air/air.module#AirPageModule' },
-            { path: 'water', loadChildren: '../water.water.module#WaterPageModule'},
+            { path: 'water', loadChildren: '../water/water.module#WaterPageModule'},
         ]
     },
 	{
