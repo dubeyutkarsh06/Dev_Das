@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../api/user.service';
 
 @Component({
   selector: 'app-water',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WaterPage implements OnInit {
 
-  constructor() { }
+  userDetails:any=[];
+  constructor(private userService: UserService) { }
+
+  GetWaterDetails(){
+    this.userService.getWater().subscribe((data) => {
+      var anyData = <any>data;
+      this.userDetails = anyData.data;
+    })
+  }
 
   ngOnInit() {
   }

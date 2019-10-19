@@ -4,6 +4,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content padding>
+    <ion-card *ngIf="post as postData">
+        <ion-img src="https://ucarecdn.com/{{ postID }}/"></ion-img>
+        <ion-card-content>
+          <p>{{ postData.desc }}</p>
+        </ion-card-content>
+      </ion-card>
 </ion-content>
