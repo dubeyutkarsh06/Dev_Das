@@ -8,6 +8,9 @@ const routes: Routes = [
   { path: 'air', loadChildren: './air/air.module#AirPageModule' },
   { path: 'water', loadChildren: './water/water.module#WaterPageModule' },
   { path: 'feed', loadChildren: './feed/feed.module#FeedPageModule' },
+  { path: 'edit-profile', loadChildren: './edit-profile/edit-profile.module#EditProfilePageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
 ];
 
 @NgModule({

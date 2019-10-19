@@ -10,11 +10,11 @@ import { Observable } from 'rxjs';
 })
 export class AirPage implements OnInit {
 
-  data: string;
+  result: string;
   error: string;
 
   constructor(private http: HttpClient, public navCtrl: NavController ) {
-    this.data = '';
+    this.result = '';
     this.error = '';
    }
    private prepareDataRequest(): Observable<object> {
@@ -25,8 +25,8 @@ export class AirPage implements OnInit {
   ionViewWillEnter() {
     this.prepareDataRequest()
       .subscribe(
-        data => {
-          this.data = JSON.stringify(data);
+        resData => {
+          this.result = JSON.stringify(resData);
         },
         err => {
           this.error = 'An error occured';

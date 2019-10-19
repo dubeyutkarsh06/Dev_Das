@@ -5,6 +5,11 @@
 </ion-header>
 
 <ion-content padding>
-    <p *ngIf="!error;else errorContent">{{ data ? data : '-' }}</p>
-<ng-template #errorContent><p><span style="color: red;">{{error}}</span></p></ng-template>
+      <ion-grid>
+          <ion-row>
+            <ion-col>
+                {{ result }}
+            </ion-col>
+          </ion-row>
+        </ion-grid>
 </ion-content>
