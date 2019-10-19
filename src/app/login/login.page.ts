@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth'
+import { auth } from 'firebase/app';
+import { UserService } from '../user.service';
+import { Router } from '@angular/router';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +12,43 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+	username: string = "";
+	password: string = "";
 
-  ngOnInit() {
-  }
+	constructor(public afAuth: AngularFireAuth, public user: UserService, public router: Router, private loadingCtrl: LoadingController) { }
+
+	ngOnInit() {
+	}
+
+	async login() {
+		const { username, password } = this
+		try {
+			const res = await this.afAuth.auth.signInWithEmailAndPassword(username + '@interact.com', password);
+			
+			if(res.user) {
+				this.user.setUser({
+					username,
+					uid: res.user.uid
+				})
+				this.router.navigate(['/tabs']);
+			}
+
+		let loading = await this.loadingCtrl.create({
+			message: "Logging in..",
+		});
+
+		loading.present();
+
+		setTimeout(() => {
+			loading.dismiss();
+		}, 5000)
+		
+		} catch(err) {
+			console.dir(err);
+			if(err.code === "auth/user-not-found") {
+				console.log("User not found");
+			}
+		}
+	}
 
 }
