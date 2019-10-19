@@ -7,9 +7,40 @@
 body {
 	font-family: sans-serif;
 	font-size: 1.3rem;
-	background: #2f4f4f;
+	background: url('https://gallery.yopriceville.com/var/albums/Nature/Beautiful_Green_Forest_Background.jpg?m=1358636400') no-repeat;
+	background-size: cover;
 }
-
+ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+ul li {
+	float: left;
+	width: 200px;
+	height: 40px;
+	background-color: white;
+	opacity: .8;
+	line-height: 40px;
+	text-align: center;
+	font-size: 20px;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+ul li a {
+	text-decoration: none;
+	color: black;
+	display: block;
+}
+ul li a:hover {
+   background-color: green;
+}
+ul li ul li {
+	display: none;
+}
+ul li:hover ul li {
+	display: block;
+}
 a {
 	text-decoration: none;
 	color: #333;
@@ -40,7 +71,7 @@ a {
 }
 
 .main-header span{
-	color: green;
+	color: #00ff9A;
 }
 
 .main-header p{
@@ -64,7 +95,7 @@ img {
 
 .card img {
 	margin-top: 2rem;
-	height: 400px;
+	height: 500px;
 	margin-bottom: 2rem;
 }
 
