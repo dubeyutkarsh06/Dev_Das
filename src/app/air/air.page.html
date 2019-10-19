@@ -5,9 +5,24 @@
 </ion-header>
 
 <ion-content padding>
-      <div *ngIf="userDetails"></div>
-      <ion-card *ngFor="let user of userDetails">
-        <p>{{ user.current.aqius }}</p>
-        <ion-label>India</ion-label> 
+    <ion-card>
+        <h4 class="word"><b>India</b> 53</h4>
+        <ion-label><h4><b>Low Air Quality</b></h4></ion-label> 
+      </ion-card>
+
+      <ion-card>
+        <h4><b>Remedies</b></h4>
+        <ion-card-content>
+          <p>1. Use craft supplies in well-ventilated areas</p>
+          <p>2. Remove carpeting if possible</p>
+          <p>3. Use a dehumidifier and/or air conditioner to reduce noisture</p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <h4 class="wor"><b>Pollutant_Responsible</b> pm25</h4>
+        <ion-card-content>
+          Fine particles can penetrate into the lungs and bloodstream. Short term exposure can cause irritation of the airways, coughing and aggravation of heart and lung diseases, expressed as difficulty breathing, heart attacks and even premature death.
+        </ion-card-content>
       </ion-card>
 </ion-content>
