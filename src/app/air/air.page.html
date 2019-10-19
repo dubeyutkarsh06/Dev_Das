@@ -4,12 +4,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-      <ion-grid>
-          <ion-row>
-            <ion-col>
-                {{ result }}
-            </ion-col>
-          </ion-row>
-        </ion-grid>
+<ion-content>
+      <ion-list *ngFor="let user of userDetails">
+        <ion-item>
+          {{ user.data }}
+        </ion-item>
+      </ion-list>
 </ion-content>
