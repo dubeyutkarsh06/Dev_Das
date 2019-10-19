@@ -11,6 +11,8 @@ const routes: Routes = [
   { path: 'edit-profile', loadChildren: './edit-profile/edit-profile.module#EditProfilePageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
+  { path: 'post', loadChildren: './post/post.module#PostPageModule' },
+  { path: 'uploader', loadChildren: './uploader/uploader.module#UploaderPageModule' },
 ];
 
 @NgModule({
