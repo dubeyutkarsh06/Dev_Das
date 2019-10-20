@@ -1,4 +1,4 @@
-#Dev_Das
+#eCARE
 
 eCARE is an android based application.
 The application is developed with an idea in mind of pollution related issues of countries like India.
