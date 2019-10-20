@@ -25,3 +25,9 @@ The whole platform would be scaled up during the production phase
 of the project with Machine Learning incorporation and analytics to
 enrich user experience.
 
+Instructions to run the project :-
+
+-> First, install npm.
+-> Install Ionic 4 in your local machine.
+-> After cloning the repository to your machine, run npm install (this will add the node modules which are required to run the app).
+-> then run, Ionic serve.
