@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
   { path: 'post', loadChildren: './post/post.module#PostPageModule' },
   { path: 'uploader', loadChildren: './uploader/uploader.module#UploaderPageModule' },
+  { path: 'profile', loadChildren: './profile/profile.module#ProfilePageModule' },
 ];
 
 @NgModule({
